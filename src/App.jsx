@@ -1,6 +1,7 @@
 import './App.css'
 import {useState} from 'react';
 import Swal from "sweetalert2";
+import animation from "js-confetti"
 
 export default function App() {
   const[task, setTask] = useState([]);
@@ -44,7 +45,10 @@ export default function App() {
   }
 
   const completeTheTask = (place) =>{
-
+      const ani = new animation()
+        ani.addConfetti({
+          emojis:  ['🌸', '🌈', '💫', '🎉','🎊','👏🏻'],
+      })
       setTimeout(()=>{
         let t = task.splice(place,1)
         setCompleted([...completed,t])
