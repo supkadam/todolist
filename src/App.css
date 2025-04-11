@@ -1,0 +1,120 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 25px;
+  background-image: url('/Portrait.jpg');
+}
+
+
+#heading{
+  font-size: 60px;
+  color: white;
+  font-weight: 900;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  animation: typing 2s steps(12,end) infinite;
+}
+
+@keyframes typing {
+  from{width:0}
+  to{width:110%}
+}
+
+.child1{
+  display: flex;
+  column-gap: 20px;
+  width: 70%;
+  height: fit-content;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#inp-box{
+  height: 45px;
+  width:300px;
+  border: 1px solid white;
+  outline: none;
+  padding-left: 20px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+#btn{
+  width: 100px;
+  height: 45px;
+  background-color: coral;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.child2{
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ongoing{
+  border: 1px solid black;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.completed{
+  border: 1px solid black;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+li{
+  list-style: none;
+  font-size: 20px;
+  
+}
+
+img{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.rendered-tasks{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.completed-tasks{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+.completed>li{
+  text-decoration: line-through;
+}
